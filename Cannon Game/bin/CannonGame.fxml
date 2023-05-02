@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="816.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CannonGamecontroller">
+   <children>
+      <ImageView fitHeight="126.0" fitWidth="816.0" layoutX="-1.0" layoutY="1.0">
+         <image>
+            <Image url="@../daniel-tolwinski-gun2animation.gif" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pane" layoutX="22.0" layoutY="126.0" onMouseClicked="#shootcannonball" onMouseMoved="#changecannonAngle" prefHeight="493.0" prefWidth="776.0" style="-fx-background-color: white;">
+         <children>
+            <Circle layoutX="-57.0" layoutY="247.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+            <Rectangle fx:id="cannonR" arcHeight="5.0" arcWidth="5.0" height="32.0" layoutX="-38.0" layoutY="231.0" stroke="BLACK" strokeType="INSIDE" width="149.0" />
+            <Rectangle fx:id="blockerR" arcHeight="5.0" arcWidth="5.0" height="115.0" layoutX="289.0" layoutY="130.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+            <Rectangle fx:id="target1R" arcHeight="5.0" arcWidth="5.0" fill="#d31313" height="115.0" layoutX="339.0" layoutY="206.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+            <Rectangle fx:id="target2R" arcHeight="5.0" arcWidth="5.0" fill="#d31313" height="115.0" layoutX="379.0" layoutY="280.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+            <Rectangle fx:id="target3R" arcHeight="5.0" arcWidth="5.0" fill="#d31313" height="115.0" layoutX="416.0" layoutY="174.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+            <Rectangle fx:id="target4R" arcHeight="5.0" arcWidth="5.0" fill="#d31313" height="115.0" layoutX="457.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+            <Rectangle fx:id="target5R" arcHeight="5.0" arcWidth="5.0" fill="#15d150" height="115.0" layoutX="485.0" layoutY="188.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+            <Rectangle fx:id="target6R" arcHeight="5.0" arcWidth="5.0" fill="#15d150" height="115.0" layoutX="517.0" layoutY="253.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+            <Rectangle fx:id="target7R" arcHeight="5.0" arcWidth="5.0" fill="#15d150" height="115.0" layoutX="568.0" layoutY="117.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+            <Rectangle fx:id="target8R" arcHeight="5.0" arcWidth="5.0" fill="#15d150" height="115.0" layoutX="602.0" layoutY="216.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+            <Rectangle fx:id="target9R" arcHeight="5.0" arcWidth="5.0" fill="#15d150" height="115.0" layoutX="643.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+         </children>
+      </Pane>
+      <Label layoutX="241.0" layoutY="14.0" text="CANNON SHOOTER" textFill="WHITE">
+         <font>
+            <Font name="Corsiva Hebrew" size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="scoreBoardlabel" layoutX="695.0" layoutY="76.0" prefHeight="43.0" prefWidth="97.0" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="574.0" layoutY="76.0" text="Score:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="timelabel" layoutX="98.0" layoutY="86.0" prefHeight="40.0" prefWidth="76.0" textFill="WHITE">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="86.0" text="Time:" textFill="WHITE">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Button fx:id="startbutton" layoutX="22.0" layoutY="54.0" mnemonicParsing="false" onAction="#startbuttonpressed" prefHeight="32.0" prefWidth="119.0" style="-fx-background-color: orange;" text="START" />
+   </children>
+</Pane>
